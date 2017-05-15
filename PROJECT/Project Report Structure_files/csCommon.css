@@ -1,0 +1,935 @@
+/* CSS Document */
+/*****************************************************************
+ * These are the basic UCL-CS styles.
+ *
+ * Note that this is a source file for the Dynamic CSS system
+ * while fills in values via PHP to create a working version  
+ *
+ *****************************************************************/
+
+/* CSS Document */
+/***************************************************************** 
+ * These are the basic UCL-CS styles. 
+ * 
+ * Note that this is a source file for the Dynamic CSS system
+ * which fills in values via PHP to create a working version  
+ *
+ *****************************************************************/
+
+
+/*******************************************
+ * Styles for HTML tags                    *
+ *******************************************/
+body {
+  background-color: #737373;
+  color: #000000;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 69%;
+  /* Weird stuff to fool old IE versions into doing the right thing */
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  font-size: 75%;
+}
+
+/* Paragraph */
+p {
+  margin: 5px 0px 5px 0px;
+  line-height: 135%;
+}
+
+/* Links */
+
+a {
+  font-weight: bold;
+}
+
+a:link {
+  text-decoration: none;
+  color: #C96500;  
+}  
+
+a:visited {
+  color: #C96500;  
+}  
+
+a:hover {
+  color: #C96500;  
+  text-decoration: underline;
+}  
+
+/* Tables */
+table {
+  font-weight: normal;
+  font-size: 100%;
+  caption-side: bottom;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border-width: 0px;
+  border-spacing: 0px 0px;
+  border-collapse: collapse;
+  /* Weird stuff to fool old IE versions into doing the right thing */
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  font-size: inherit;
+}
+
+tr {
+  border-width: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+td > p:first-child, th > p:first-child {
+  margin-top: 0px !important;
+}
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0px !important;
+}
+th {
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0ex 1ex 0ex 1ex;
+  height: 3ex;
+}
+
+/* Headings */
+h1 {
+  font-size: 130%;
+  font-weight: bold;
+  margin-bottom: .4em;
+  margin-top: .9em;
+  display: block;
+}
+h2 {
+  font-size: 110%;
+  font-weight: bold;
+  font-style: italic;
+  display: block;
+  margin-bottom: .35em;
+  margin-top: .7em;
+}
+h3 {
+  font-size: 100%;
+  font-weight: bold;
+  margin-bottom: .35em;
+  margin-top: .7em;
+}
+h4 {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: .35em;
+  margin-top: .7em;
+}
+h1, h2, h3, h4 {
+    color: #7f0900;
+}
+
+/* Lists */
+ul {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+  
+li ol {
+    list-style-type: lower-alpha;
+}    
+li ol li ol {
+    list-style-type: lower-roman;
+}
+dl dt {
+    font-weight: bold;
+}
+
+hr {
+  color: #737373;
+  background-color: #737373;
+  border: 0px;
+  height: 1px;
+  width: 100%;
+  clear: both;
+  margin: 4px auto 4px auto  !important;
+}
+    
+/* Miscellaneous */
+div {
+  margin: 0px;
+  padding: 0px;
+}  
+caption {
+    font-style: italic;
+}
+pre {
+  font-family: Courier New, Courier, mono;
+  font-size: 120%;
+}
+img, form {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+/*******************************************
+ * Generally useful classes                *
+ *******************************************/
+
+.heavy, .heavytype {
+  font-weight: bold;
+}
+
+.colouredtext {
+  font-weight: 600;
+  color: #7f0900;
+}
+
+.brighttext {
+  font-weight: 600;
+  color: #FF0000;
+}
+
+.largertext {
+  font-size: 120%;
+}
+
+span.fixedwidth, .fixed, .fixedwidth, .code {
+  font-family: Courier New, Courier, mono;
+  font-size: 120%;
+}
+.centred {
+    text-align: center;
+}
+
+/*******************************************
+ * Specially formatted HTML tags           *
+ *******************************************/
+dl.tablist, dl.greylist {
+  margin: 0px 0px 5px 0px;
+  display: inline-block;
+  width: 100%;
+/*  width: 739px;   */
+}
+
+dl.greylist{
+  background-color: #DCDCDC;
+}
+
+dl.tablist dt, dl.greylist dt {
+  float: left;
+  clear: left;
+  text-align: right;
+  font-weight: bold;
+/*  width: 150px; */
+  width: 20%;
+  margin: 5px 0px 0px 0px;
+}
+
+dl.tablist dt:after, dl.greylist dt:after  {
+  content: ":";
+}
+
+dl.tablist dd + dd, dl.greylist dd + dd {
+  margin-left: 20%;
+  margin-top: 0px;
+  padding: 0px 0px 0px 5px;
+}
+
+dl.tablist dd, dl.greylist dd {
+/*  margin: 0px 0px 0px 150px;   
+  width: 564px;  */
+  width: 78%;  
+  padding: 0px 0px 0px 5px;
+  min-height: 1em;
+  float: left;
+  margin: 5px 0px 0px 0px;
+}
+
+dl.tablist dd p:first-child, dl.greylist dd p:first-child {
+  margin-top: 0px;
+}
+
+dl.tablist dd p:last-child, dl.greylist dd p:last-child {
+  margin-bottom: 0px;
+}
+
+dl.greylist dt, dl.greylist dd {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #FFFFFF;
+}
+
+dl.greylist{
+  border-bottom: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+}
+
+/*
+dl.greylist dd {
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #FFFFFF;
+  margin-left: -2px;
+}
+*/
+
+dl.greylist dt {
+/*  width: 148px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;*/
+}
+
+/* Inline list */
+ul.inlineList {
+  list-style:none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 5px 0px 0px;
+  display: inline;
+}
+ul.inlineList li {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  display: inline;
+}
+
+/* Table formatting */
+table.greytable{
+  margin: 0px 0px 5px 0px;
+}
+
+table.greytableCentred {
+  margin: 0px auto 5px auto;
+}
+
+table.greytable th, table.greytableCentred th {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #333333;
+  padding: 0px 2px 0px 2px;
+}
+
+table.greytable td, table.greytableCentred td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  background-color: #DCDCDC;
+  padding: 0px 2px 0px 2px;
+}
+
+table.layouttable {
+  font-weight: normal;
+  font-size: 100%;
+  caption-side: bottom;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border-width: 0px;
+  border-spacing: 0px 0px;
+  border-collapse: collapse;
+}
+
+table.layouttable tr {
+  border-width: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+table.layouttable td, table.layouttable th  {
+  font-weight: normal;
+  vertical-align: top;
+  padding: 0ex 1ex 1ex 0ex;
+  margin: 0px 0px 0px 0px;
+}
+
+table.deftable{
+  margin: 0px 0px 5px 0px;
+  width: 100%;
+}
+
+table.deftable th {
+  width: 20%;
+  text-align: right;
+  vertical-align: top;
+}
+table.deftable th, table.deftable td {
+  padding-bottom: 2px;
+}
+
+table.deftable th:after {
+  content: ":";
+}
+
+/* People pages */
+div.peopleImage{
+  float: right;
+  clear: both;
+  width: 25%;
+}
+
+div.peopleData {
+  width: 75%;
+}
+
+/* Publications table */
+#pubtable td, #pubtable td {
+  vertical-align: top;
+  padding: 0ex 1ex 1ex 0ex;
+  margin: 0px 0px 0px 0px;
+}
+
+
+/***************************************
+ * Classes to manage object positioning
+ ***************************************/
+
+/*Image and Div placement */
+
+.leftImage, .left {
+  float: left;
+  margin-right: 5px;
+}
+
+img.leftImage, img.left {
+  font-style: italic;
+}
+
+.leftImage img, .left img {
+  margin-bottom: 3px;
+  font-style: italic;
+}
+
+.rightImage, .right {
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 0px;
+}
+
+img.rightImage, img.right {
+  font-style: italic;
+}
+
+.rightImage img, .right img {
+  margin-bottom: 3px;
+  font-style: italic;
+}
+
+.clearblock { /*Prevents lower divs from floating upwards*/
+  clear: both !important;
+  float: none !important;
+}
+
+.divider {
+  display: block;
+  width: 591.2px;
+  margin: 0px auto 0px auto;
+  clear: both;
+}
+
+.fullWidthImage, .fullWidth {
+  margin: 3px auto 3px auto;
+  font-style: italic;
+  display: block;
+  clear: both;
+}
+
+/* Sandbags */
+
+.RightSandbag {
+  float: right;
+  clear: right;
+  margin: 0px 0px 0px 0px;
+  border: thin none red;
+}
+
+/**********
+ * Footer
+ * *******/
+#footer {
+  background-color: #333333;
+  color: #CCCCCC;
+}
+
+#footer_1, #footer_2 {
+  font-size: smaller;
+}
+
+/***********************
+ * tt_news
+ ***********************/
+
+/* tt_news LATEST view  */
+.newsLatestImage img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* tt_news LIST view  */
+.news-list-container {
+  padding: 0px;
+}
+ 
+.news-list-container h2 {
+  margin: 5px 0px 5px 0px;
+}
+
+div.news-list-item {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+  border-bottom: 1px solid #737373;
+}
+
+div.news-list-item {
+  margin: 0px;
+}
+ 
+div.news-list-item div {
+  float: left;
+}
+
+div.news-list-item div.newsImage {
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 202px
+}
+
+div.news-list-item div.newsContent {
+  float: left;
+  width: 532px;
+}
+
+.news-list-date {
+  float: right;
+  display:block;
+  padding-left:10px;
+}
+   
+.news-list-morelink  {
+  padding-left:5px;
+}
+
+/* tt_news SINGLE view  */
+
+div.news-single-item {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+}
+
+div.news-single-item div.newsImage {
+  float: right;
+  margin-left: 5px;
+}
+
+div.news-single-item div.newsContent {
+  float: left;
+}
+
+.news-single-imgcaption {
+  margin: 2px auto 5px auto;
+  font-style: italic;
+  font-size: 90%;
+  text-align: center;
+}
+
+div.cs-single-next {
+  float: right;
+}
+ 
+div.cs-single-prev {
+  float: left;
+}
+
+span.cs-single-label {
+  font-weight: bold;
+}
+
+div.cs-single-nav {
+  margin-top: 15px;
+  padding: 0px 5px 0px 5px;
+}
+
+div.cs-single-nav p, div.cs-single-backlink p {
+  margin-bottom: 0px !important;
+}
+
+div.cs-single-backlink {
+  float: left;
+  margin-top: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+div.cs-single-nav p, div.cs-single-backlink p {
+	margin-bottom: 0px;
+}
+
+/*****************
+ tx-jfmulticontent
+ ****************/
+.tx-jfmulticontent-pi1 .subcolumns {
+  clear: both;
+}
+
+/*****************
+ Floating CEs
+ ****************/
+.floatInNextRight, .floatInNextLeft {
+  float: right;
+  max-width:40%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #737373;
+  background-color: #FFFFFF;
+}
+
+.floatInNextLeft {
+  float: left;
+}
+
+.floatInNextRight *, .floatInNextLeft * {
+  max-width:100%;
+  width: 100%;
+  height: auto;
+}
+
+.floatInNextRight img, .floatInNextLeft img  {
+  height: auto;
+  width: 96%;
+}
+
+.floatInNextRight *:first-of-type, .floatInNextLeft *:first-of-type {
+  margin-top: 4px;
+}
+
+/* News gallery formatting */
+
+/* The whole thing */
+.gallery {
+  width: 100% !important;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 1);
+}
+
+
+/* The news image and caption container*/
+.gallery div.csImageDisplay div.newsGalleryImage, .gallery div.csImageDisplay div.newsGalleryCaptionContainer {
+  width: 50%;
+  float: left;
+/*  position: relative;   */
+}
+
+/* The news caption container*/
+.gallery div.csImageDisplay div.newsGalleryCaptionContainer {
+/*  background-color: rgba(51, 51, 51, 1);  */
+  color: #cccccc;
+  font-weight: normal;
+  font-size: 120%;
+}
+
+/* The news caption*/
+.gallery div.csImageDisplay .newsGalleryCaption {
+    bottom: 0;
+    margin: 0px 15px 5px 15px;
+    position: absolute;  
+}
+
+.gallery div.csImageDisplay div.newsGalleryCaption h1 {
+  font-size: 130%;
+  margin-top: 0px;
+}
+
+.gallery div.csImageDisplay div.newsGalleryCaption h2 {
+  color: #F6BE00;
+}
+
+.gallery div.csImageDisplay div.newsGalleryCaption h3 {
+  color: #F6BE00;
+}
+.gallery div.csImageDisplay div.newsGalleryCaption h4 {
+  color: #F6BE00;
+}
+.gallery div.csImageDisplay div.newsGalleryCaption h3.newsMore {
+  text-align: right;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+ 
+/* Set-up so that only the first image displays initially - needed if Javascript is disabled*/
+.gallery .bxSliderItem {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.gallery .bxSliderItem:first-child {
+  display: block;
+}
+
+/* Switch off underlining when curor hovers over text */
+.gallery .bxSliderItem a:hover{
+  text-decoration: none;
+}
+
+/********************
+ Stuff for jquery UI
+ *******************/
+ .ui-tabs .ui-tabs-nav li {
+   border-left: 1px solid #737373;
+   border-top: 1px solid #737373;
+   border-right: 1px solid #737373;
+}
+
+.ui-tabs .ui-tabs-nav .ui-state-default {
+  background-image: none;
+  background-color: #666666;
+ }
+ 
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  background-color: #ECECEC !important;
+}
+/*****************
+ Stuff for  TYPO3
+ ****************/
+/* Left, center, right and justify alignment of text in block elements*/
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
+
+div.indent, p.indent {
+margin-left: 0.7em;
+}
+
+div.csc-header {
+/*  clear: both;    */
+}
+
+.csc-textpic-caption {
+  font-style: italic;
+}
+
+/* For Filelinks */
+
+table.csc-uploads tr, table.csc-uploads td, table.csc-uploads p {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+/* rulers before and after content elements */
+div.csc-frame-rulerAfter {
+  border-bottom: 1px solid #737373;
+}
+
+div.csc-frame-rulerBefore {
+  border-top: 1px solid #737373;
+}
+
+div.syllabusSummary * {
+  border-style: none !important;
+}
+
+div.border2 img {
+  border: 1px solid #737373;
+  border-radius: 8px;
+  -moz-border-radius: 8px; /* Firefox 3.6 and earlier */
+}
+/*
+div.csc-textpic-border div.csc-textpic-imagewrap .csc-textpic-image img, div.csc-textpic-border div.csc-textpic-single-image img {
+  border: 1px solid #737373;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+    padding: 0;
+}
+*/
+div.csc-textpic-border img {
+  border: 1px solid #737373 !important;
+  border-radius: 8px !important;
+  -moz-border-radius: 8px !important; /* Firefox 3.6 and earlier */
+    padding: 0 !important;
+}
+
+/* To provide hover effect so that image darkens when mouse is over it. */
+div.csc-textpic.imageHoverDarken div.csc-textpic-image:hover {
+	background-color: #000000;               
+}
+/* To provide hover effect so that image lightens/darkens when mouse is over it. */
+div.csc-textpic.imageHoverLighten div.csc-textpic-image img:hover,
+div.csc-textpic.imageHoverDarken div.csc-textpic-image img:hover {
+	opacity: 0.5;
+}
+    
+/* For the TYPO3 RTE */
+body.htmlarea-showtableborders table.layouttable,
+body.htmlarea-showtableborders table.layouttable td,
+body.htmlarea-showtableborders table.layouttable th,
+body.htmlarea-showtableborders table.layouttable tr {
+  padding: 3px; border:1px dashed #316ac5 ! important;
+}
+
+/********************
+   The CS Slider  
+********************/
+
+div.CSSlider {
+  float: left;
+  position: relative;
+}
+
+div.sliderWindow, div.thumbWindow{
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+div.sliderBlockSet {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+/*  position: absolute;    */  
+  top: 0;
+  left: 0;
+}
+
+div.sliderBlock {
+  display: none;  /*Hide the divs initially - will be overridden once Javascript starts*/
+  padding: 0px 0px 0px 0px;
+  float: left;
+}
+
+div.sliderImage img {
+  max-width:100%;
+  height: auto;
+}
+
+div.border2 div.sliderImage img {
+  max-width: 100%;
+}
+
+div.sliderWindow div.sliderBlock.item0, div.sliderBlockJS {
+  display: block; /*Override the above for the first item so that something displays when Javascript is disabled*/
+}
+
+div.thumbWindow div.sliderBlock.item1, div.thumbWindow div.sliderBlock.item2, div.thumbWindow div.sliderBlock.item3 {
+  display: block; /*Override the above for the first item so that something displays when Javascript is disabled*/
+}
+
+div.CSSlider div.sliderCaptionBand {
+  position: relative;
+  top: -6em;
+  height: 5em;
+  margin-bottom: -5em;
+  color: #FFFFE8;
+  background-color: rgb(22, 0, 0); /*Fall-back for IE*/
+  background-color: rgba(22, 0, 0, 0.4); /*Override for others*/
+}
+
+div.CSSlider div.sliderCaptionBand div.sliderCaption {
+  margin: auto 0 auto 1em;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+/*  font-size: 60%;     */
+}
+
+div.CSSlider div.sliderCaption h1 {
+  margin-bottom: 0.2em;
+  margin-top: 0.4em;
+  font-size: 130%;
+  color: #EF8100;
+}
+
+
+div.CSSlider h1, div.CSSlider .colouredtext  {
+  color: #EF8100;
+}
+
+/************************
+ Stuff for csImageDisplay
+ ************************/
+div.bxSlider {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.bxSliderItem {
+/*  position: static !important;  */
+  float: none !important;
+}
+
+div.csImageDisplay div.sliderCaptionBand {
+  position: relative;
+  top: -5em;
+  height: 3.5em;
+  margin-bottom: -3.5em;
+  color: #FFFFE8;
+  background-color: rgb(22, 0, 0); /*Fall-back for IE*/
+  background-color: rgba(22, 0, 0, 0.4); /*Override for others*/
+}
+
+div.csImageDisplay div.sliderCaptionBand div.sliderCaption {
+  margin: auto 0 auto 1em;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  font-size: 60%;         
+}
+
+div.csImageDisplay div.sliderCaptionBand div.sliderCaption div.captionHeader {
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+/*  font-size: 80%;  */
+  color: #EF8100;
+}
+
+div.csImageDisplay div.sliderCaptionBand div.sliderCaption div.captionText {
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+div.csImageDisplay .bx-viewport {
+/*  overflow: visible !important;        */
+}
+
+/* Hide all but first element initially */
+div.bxSlider div.bxSliderItem.csc-textpic-image {
+  display: none;
+  margin-left: 0px;
+}
+
+div.bxSlider div.bxSliderItem.csc-textpic-image:first-child {
+  display: inherit;
+}
+
+/* Navigation menu */
+div.navigation {
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #ECECEC;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EF8100;
+  margin: 0.3em auto 0.3em auto;
+  padding: 0.1em;
+  width: 100%;
+  float: left;
+/*  height: 1.4em; */
+}
+
+ul.navigationMenu li {
+  font-size: 85%;
+  font-style: italic;
+  margin-left: 5px;
+}

@@ -1,0 +1,754 @@
+/* CSS Document */
+/***************************************************************** 
+ * These are the styles specific to the desktop
+ * version of the UCL-CS pages. 
+ *****************************************************************/
+
+/* CSS Document */
+/***************************************************************** 
+ * These are the basic UCL-CS styles. 
+ * 
+ * Note that this is a source file for the Dynamic CSS system
+ * which fills in values via PHP to create a working version  
+ *
+ *****************************************************************/
+
+
+/*******************************************
+ * Styles for HTML tags                    *
+ *******************************************/
+body {
+	background-color: #737373;
+  background-image: url(/fileadmin/UCL-CS/web_assets/layout/grid_bg.gif);
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+a {
+	font-weight: normal;
+}
+
+h1 {
+	color: #333333;
+}
+
+h2 {
+	color: #333333;
+  font-size: 130%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3 {
+	color: #333333;
+}
+
+h4 {
+	color: #333333;
+}
+
+#everything {
+  -moz-box-shadow:    0 11px 25px rgba(50, 50, 50, 0.68);
+  -webkit-box-shadow: 0 11px 25px rgba(50, 50, 50, 0.68);
+  box-shadow:         0 11px 25px rgba(50, 50, 50, 0.68);
+}
+
+/* Larger text for 1st header of page */
+#mainText > div:first-child > div:first-child > h1:first-child {
+  font-size: 200%
+}
+
+#mainText p {
+	margin: 5px 0 15px 0px;
+}
+
+/**************************************
+ * Classes for the 2-column layout
+ **************************************/ 
+
+/*This contains all the content divs and provides the main background colour*/
+#mainDiv {
+    float:left;
+    overflow: hidden;
+    background-color: #ECECEC;
+    border-right: 4px solid #ECECEC;
+    width: 996px; 
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px;
+}
+
+/*This contains left and middle columns and provides the left column 
+background colour. It is shifted left by 75%.*/
+#innerContainer {
+    float:left;
+    background-color: #ECECEC;
+    position: relative;
+    /* right:75%;   */
+    right: 746px; 
+}
+
+/*leftCol and middleCol compensate the 75% left shift.*/
+#leftCol {
+    float: left;
+    width: 220px; 
+    position: relative;
+    left: 746px; 
+    margin-bottom: 200px; /*Create space for leftCol Base items */
+}
+
+#leftColBase {
+    float: left;
+    /* width: 25%; */
+    width: 220px; 
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /* left: 75%;  */
+/*    left: 746px;  */
+}
+
+#middleCol {
+    float: left;
+    /* width: 75%; */
+    width: 746px; 
+    position: relative;
+    /* left: 75% */  
+    left: 746px; 
+}
+
+/* Div formatting */
+div.page_layout { /*Gives a full-width div*/
+	position: relative;
+	width: 1000px;	/*Sum of left, middle and right column widths*/
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+/*********************************************
+ * Content styles for the component page divs
+ *********************************************/
+
+/**************************** 
+ * Standard UCL header
+ ****************************/
+#banner {
+    background-color: #ffffff;
+    height: 110px;
+}		
+#section_head {
+	margin: 15px 0px 0px 15px; 
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase; 
+	color: #222222;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#section_sub_head {
+	float: left; 
+	margin: 3px 0px 0px 3px; 
+	font-size: 11px; 
+	font-weight:lighter;
+	text-transform: uppercase; 
+	color: #000000;
+}
+#UCLLogo {
+/*	background-image: url('/fileadmin/UCL-CS/web_assets/ucl_logo/ucl_logo.jpg'); */
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 265px; 
+	height: 110px;
+}
+
+/* Search box*/
+#ucl_divider {
+	 height: 24px; 
+	 background-color: #EF8100;
+	 color: #FFFFFF;
+}
+/* Search form formatting */
+.searchForm *, .breadcrumb {
+	float: left;
+	font-size: 110%;
+}
+
+.searchForm .text {
+	border: 0px solid #cccccc;  
+	margin: 3px 0px 0px 15px;
+	padding: 0px 0px 0px 5px;
+	color: #000000;
+	display: inline;
+	vertical-align: middle;
+	width: 150px;
+	height: 18px;
+}
+
+.searchForm .button {
+	background-image: url(/fileadmin/UCL-CS/web_assets/icons/magGlass.png); 
+	background-color: transparent;
+	background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: left top;
+	border: none;
+	padding: 0px;
+	width: 20px;
+	height: 20px;
+	margin: 2px 0px 0px 5px;
+} 
+
+.searchForm .button:hover {
+  background-position: right top;
+}
+
+/* Breadcrumb trail formatting */
+.breadcrumb {
+	margin: 5px 0px 0px 54px;
+	color: #444444;
+	width: 700px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.breadcrumb a {
+	 color: #FFFFFF;
+}
+
+
+/***********************
+ * Mobile Button
+ * *********************/
+#mobileText {
+/*	padding-top: 0.5em;  
+	margin-right: 1em;  */
+	margin: 28pt 0pt 14pt 0pt;
+} 
+
+#mobileButton img {
+	/*width: 3.5em; */
+	width: 0px;
+	height: auto;
+}
+
+/************************** 
+ * The left column 
+ **************************/
+#leftCol {
+	font-size: 120%; /* Left column size */	
+	color: #5A5A5A;
+}
+ 
+#leftCol h1, #leftCol h2, #leftCol h3, #leftCol h4 {
+	text-align: left;
+	margin-top: 4px;
+	margin-bottom: 2px;
+} 
+
+#leftCol h1 {
+	font-size: 110%;
+}
+
+#leftCol h2 {
+	font-size: 105%;
+}
+
+#leftCol hr {
+	width: 200px;
+	margin-left: 0px;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+#leftCol a {
+	text-decoration: none;
+}
+
+#leftCol a:link {
+	color: #5A5A5A !important;
+  font-weight: normal !important;
+}
+#leftCol a:visited {
+	color: #5A5A5A !important;
+}
+#leftCol a:hover {
+	color: #000000 !important;
+}
+
+#leftCol .inPath {
+  color: #EF8100;
+}
+
+#leftCol ul {
+	margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.leftContent {
+	padding-left: 15px;			   
+	padding-right: 15px;			   
+}
+
+.leftContent div.csc-frame-rulerAfter {
+	border-bottom: 2px solid #FFFFFF;	
+	padding-bottom: 5px;		   
+}
+
+.leftContent div.csc-frame-rulerBefore {
+	border-top: 2px solid #FFFFFF;	
+	padding-top: 5px;		   
+}
+
+.leftContent div.border2 img {
+	border-color: #FFFFFF;
+}
+
+/**************************
+ * Supplementary content in left column
+ **************************/ 
+div.leftSupplement {
+	margin: 0px 10px 0px 10px;
+}
+/************************** 
+ * The middle column
+ **************************/
+div.text {
+	width: 739px;
+	margin: 0px 7px 0px 0px;
+}
+
+
+#mainText {
+  margin-bottom: 40px;
+  margin-top: 8px;
+}
+
+/***********************
+ * Footer
+ ***********************/ 
+#owner {
+	position: relative;
+	top: -2em;
+	color: #000000;
+}
+
+div.tx-responsible-pi1 {
+  padding-bottom: 5px;
+  margin: 0px auto 0px auto;
+	font-size: smaller;
+	text-align: center;
+}
+
+
+#footer p {
+	margin: 0px;
+}
+
+#footer_1 {
+	padding: 0px 30px 10px 30px;
+}
+
+#footer_2 {
+	padding: 0px 30px 10px 30px;
+}
+
+#address {
+	float: left;
+}
+
+#telephone {
+	float: left;
+	margin-left: 30px;
+}
+
+#engfac {
+	float: right;
+}
+
+#disclaimer {
+	float: right;
+	margin-top: 10px;
+}
+
+#copyright {
+	float: left;
+	margin-top: 10px;
+}
+
+/**************************
+ * News and Events Tickers
+ **************************/
+
+#events_div {
+  background-color: #ECECEC;
+  font-size: 80%;
+  bottom: 0px; /*Don't know why this is needed*/
+  max-height: 140px;
+  overflow: hidden;
+}
+
+#events_div div.eventTime {
+	width: 20%;
+	height: auto;
+	float: left;
+}
+
+#events_div div.eventTitle {
+	float: right;
+	width: 76%;
+}
+
+div.tickerControl {
+	height: 15px;
+	margin-top: 10px;
+	font-size: 80%;
+}
+
+div.controlText {
+	float: left; 
+	margin-right: 10px;
+}
+
+div.controlButton {
+	float: left;
+	width: 15px;
+	height: 15px;
+	background-image: url('/fileadmin/UCL-CS/web_assets/icons/iconsGrey.gif'); 
+	background-position: 15px 15px;
+}
+
+div.controlButton.tickerPaused {
+	background-position: 15px 15px;
+}
+
+div.controlButton.tickerPlaying {
+	background-position: 0px 15px;
+}
+
+/***********************
+ * tt_news
+ ***********************/ 
+
+/* tt_news LATEST view  */
+.newsLatestImage img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/* tt_news LIST view  */
+.news-list-container {
+	padding: 0px;
+}
+ 
+.news-list-container h2 {
+	margin: 5px 0px 5px 0px;
+}
+
+div.news-list-item {
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+	border-bottom: 1px solid #737373;
+}
+
+div.news-list-item {
+	margin: 0px;
+}
+ 
+div.news-list-item div {
+	float: left;
+}
+
+div.news-list-item div.newsImage {
+	margin-right: 5px;
+	margin-top: 5px;
+	width: 202px
+}
+
+div.news-list-item div.newsContent {
+	float: left;
+	width: 532px;
+}
+
+.news-list-date {
+	float: right;
+	display:block;
+	padding-left:10px;
+}
+   
+.news-list-morelink  {
+	padding-left:5px;
+}
+
+/* tt_news SINGLE view  */
+
+div.news-single-item {
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+}
+
+div.news-single-item div.newsImage {
+	float: right;
+	margin-left: 5px;
+}
+
+div.news-single-item div.newsContent {
+	float: left;
+}
+
+.news-single-imgcaption {
+	margin: 2px auto 5px auto;
+	font-style: italic;
+	font-size: 90%;
+	text-align: center;
+}
+
+div.cs-single-next {
+	float: right;
+}
+ 
+div.cs-single-prev {
+	float: left;
+}
+
+span.cs-single-label {
+	font-weight: bold;
+}
+
+div.cs-single-nav {
+	margin-top: 15px;
+	padding: 0px 5px 0px 5px;
+}
+
+div.cs-single-backlink {
+	float: left;
+	margin-top: 5px;
+	padding: 0px 5px 0px 5px;
+}
+
+/*****************
+ Stuff for  TYPO3 
+ ****************/
+
+/* Images */
+div.csc-textpic-border img {
+	border: 1px solid #737373 !important;
+	border-radius: 0px !important;
+  padding: 0 !important;
+}
+ 
+/* Left, center, right and justify alignment of text in block elements*/
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
+
+div.indent, p.indent {
+margin-left: 30px;
+}
+
+div.csc-header {
+/*	clear: both;       */
+}
+
+/* For Filelinks */
+
+table.csc-uploads tr, table.csc-uploads td, table.csc-uploads p {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+div.border2 img {
+	border: 1px solid #737373;
+	border-radius: 8px;
+	-moz-border-radius: 8px; /* Firefox 3.6 and earlier */
+}
+
+/* For the TYPO3 RTE */
+body.htmlarea-showtableborders table.layouttable, 
+body.htmlarea-showtableborders table.layouttable td, 
+body.htmlarea-showtableborders table.layouttable th, 
+body.htmlarea-showtableborders table.layouttable tr {
+	padding: 3px; border:1px dashed #316ac5 ! important;
+}
+
+/* JQuery stuff */
+h3.ui-accordion-header {
+    font-size: 120%;
+    padding-bottom: 0.25em !important;
+    padding-top: 0.25em !important;
+}
+
+/*jfMulticontent*/
+/* Reduce width between columns */
+.tx-jfmulticontent-pi1 .subcl {
+    padding: 0px 5px 0px 0px;
+}
+.tx-jfmulticontent-pi1 .subcr {
+    padding: 0px 0px 0px 5px;
+}
+
+/*******************************************
+ These ones apply only when printing 
+ *******************************************/
+@media print {
+
+	body {
+		background-color: #888888;
+		background-image: none;
+	} 
+
+	#everything {
+	  -moz-box-shadow: none;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  width: 100%;
+	  background-color: #FFFFFF;
+	}
+	
+	/*This contains left and middle columns and provides the left column 
+	background colour. It is shifted left by 75%.*/
+	#innerContainer {
+	    float:none;
+	    right: auto; 
+	    background-color: #FFFFFF;
+	}
+
+	/*This contains all the content divs and provides the main background colour*/
+	#mainDiv {
+	    background-color: #FFFFFF;
+	    border-right: none;
+	    width: 100%; 
+	    float: none;
+	}
+
+	#middleCol {
+	    float: none;
+	    width: 100%; 
+	    left: auto; 
+	}
+
+	#mainText {
+	    margin: 0px auto 0px auto;
+	    width: 100%; 
+	}
+
+  /* These bits get left out when printing */  
+  #leftCol,
+  #engfac,
+  #disclaimer, 
+	#footer_1,
+	#footer_2,
+	#TSFE_ADMIN,
+	#TSFE_ADMIN_PANEL_FORM,
+	.navigation {
+  	display: none;
+  }
+ 
+
+  div.page_layout { /*Gives a full-width div*/
+  	width: 100%;
+  	margin: 0px auto 0px auto;
+  }
+  
+  #banner {
+		height: 1cm;
+	}
+  
+  #banner, #ucl_divider {
+    page-break-after: avoid;
+  }  
+  
+  #section_head {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  #ucl_divider * {
+  	display: none;
+  }
+  
+  #ucl_divider {
+		height: 0px;
+		border-top: 0.1cm solid #EF8100;
+	}
+  
+  #UCLLogo {
+/*  	background-image: url('/fileadmin/UCL-CS/web_assets/ucl_logo/ucl_logo.jpg'); */
+		height: auto;
+		width: auto;
+	}
+  #UCLLogo img {
+		height: 2cm;
+	}
+   
+  div.CSSlider {
+		margin: 0.1cm auto 0cm 0.2cm;
+	}
+
+  #minutes_header {width: 17cm;}  
+  
+  #middleCol {
+    min-height: 0px;
+  }
+
+  div.text {
+    width: 100%cm;    
+  }
+ 
+	#owner {
+		position: relative;
+		top: auto;
+		color: #000000;
+		background-color: #ffffff;
+	}
+	div.tx-responsible-pi1 {
+    margin: 0.5cm 0 0;
+    padding-bottom: 0px;
+    text-align: left;
+	}
+	
+	.newsGalleryImage > img {
+    height: auto;
+    max-width: 100%;
+	}
+	
+	.gallery .bxSliderItem {
+  	width: 100% !important;
+	}
+  
+  /* Fixes for definition list styles */
+  
+	dl.tablist, dl.greylist {
+		margin: 0em 0em 0.1cm 0em;
+	}
+	
+	dl.tablist dt, dl.greylist dt {
+/*		width: 3.6cm;      */
+	}
+	
+	
+	dl.tablist dd, dl.greylist dd {
+/*		margin: 0em 0em 0em 0.1cm;
+		width: 15cm;         */
+	}
+	
+	
+	dl.greylist, dl.greylist dt, dl.greylist dd {
+		border-top-width: 0.1cm;
+	}
+	
+	dl.greylist dd {
+		border-left-width: 0.1cm;
+		margin-left: -0.1cm;
+	}
+	
+	dl.greylist dt {
+/*		width: 3.6cm;  */
+		border-right-width: 0.1cm;
+		border-right-color: #FFFFFF;
+	}
+}
+/**/
